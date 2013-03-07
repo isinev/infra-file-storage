@@ -1,6 +1,5 @@
 package infra.file.storage.domain
 
-import groovy.transform.CompileStatic
 import infra.file.storage.FileStorage
 import infra.file.storage.FilesManager
 import org.springframework.web.multipart.MultipartFile
@@ -9,7 +8,6 @@ import org.springframework.web.multipart.MultipartFile
  * @author alari
  * @since 1/15/13 9:45 PM
  */
-@CompileStatic
 class DomainFilesManager implements FilesManager {
     private final FilesManager holder
 

@@ -32,7 +32,7 @@ grails.project.dependency.resolution = {
     dependencies {
         compile "net.java.dev.jets3t:jets3t:0.9.0"
 
-        test("org.spockframework:spock-grails-support:0.7-groovy-2.0") {
+        test("org.spockframework:spock-grails-support:0.7-groovy-1.8") {
             export = false
         }
     }

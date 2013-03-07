@@ -39,6 +39,11 @@ abstract public class FileStoragePrototype implements FileStorage {
         HttpURLConnection con =
                 (HttpURLConnection) new URL(getUrl(path, filename, bucket)).openConnection();
         con.setRequestMethod("HEAD");
-        return con.getContentLengthLong();
+        String contentLengthString = con.getHeaderField("content-length");
+        if (contentLengthString == null) {
+            return -1;
+        } else {
+            return Long.parseLong(contentLengthString);
+        }
     }
 }
